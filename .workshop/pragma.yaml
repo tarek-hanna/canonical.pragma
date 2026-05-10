@@ -6,6 +6,13 @@ base: ubuntu@24.04
 sdks:
 - name: project-pragma-dev-tools
 
+- name: system
+  plugs:
+    storybook:
+      interface: tunnel
+      endpoint: 6009 # expose storybook port
+
+
 actions:
   install: bun install
   build: bun run build
